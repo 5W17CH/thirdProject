@@ -28,6 +28,17 @@ body
     height: 9.5rem;
 }
 
+#cvc
+{
+    display: block;
+    position: absolute;
+    top: 4.3rem;
+    right: 2rem;
+    font-size: 0.6rem;
+    color: white;
+    letter-spacing: 0.1rem;
+}
+
 #cardfront
 {
     display: flex;
@@ -36,6 +47,39 @@ body
     height: 10rem;
     left: 1rem;
     top: 7.4rem;
+}
+
+#cardnumber
+{
+    display: block;
+    position: absolute;
+    letter-spacing: 0.2rem;
+    font-size: 1.1rem;
+    top: 5.2rem;
+    left: 1.2rem;
+    color: white;
+}
+
+#cardname
+{   
+    display: block;
+    position: absolute;
+    font-size: 0.6rem;
+    letter-spacing: 0.1rem;
+    bottom: 1.5rem;
+    left: 1.2rem;
+    color: white;
+}
+
+#expire
+{
+    display: block;
+    position: absolute;
+    font-size: 0.6rem;
+    letter-spacing: 0.1rem;
+    right: 1.2rem;
+    bottom: 1.5rem;
+    color: white;
 }
 
 .logo
@@ -51,7 +95,7 @@ body
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 100%;
+    height: auto;
     margin-top: 5rem;
     margin-left: 5%;
 }
@@ -161,4 +205,14 @@ body
 #datemonth:focus
 {
     border-color:  hsl(249, 99%, 64%);
+}
+
+#button
+{
+    height: 3rem;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    font-size: 1rem;
+    border-radius: 0.6em;
 }
