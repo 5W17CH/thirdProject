@@ -31,6 +31,7 @@ body
     right: 1.5rem;
     width: 17rem;
     height: 9.5rem;
+    user-select: none;
 }
 
 #cvc
@@ -52,6 +53,7 @@ body
     height: 10rem;
     left: 1rem;
     top: 7.4rem;
+    user-select: none;
 }
 
 #cardnumber
@@ -220,6 +222,7 @@ body
     color: white;
     font-size: 1rem;
     border-radius: 0.6em;
+    cursor: pointer;
 }
 
 @media only screen and (min-width:900px)
@@ -274,7 +277,7 @@ body
     {   
         display: flex;
         position: relative;
-        max-width: 30rem;
+        max-width: 25rem;
         margin-left: 25%;
     }
 
@@ -287,5 +290,11 @@ body
     #cardnumber
     {
         font-size: 1.25rem;
+    }
+
+    #cvcinput
+    {
+        width: 12.2rem;
+        height: 2.8rem;
     }
 }
