@@ -1,33 +1,40 @@
-//only run the function if every field is filled//
-
-const cardNumber = document.getElementById("cardnumber");
 const cardName = document.getElementById("cardname");
-const completeDate = document.getElementById("expire");
-const Cvc = document.getElementById("cvc");
-
-var finalName = document.getElementById("inputname");
-var finalNum = document.getElementById("inputnum");
-var finalMonth = document.getElementById("datemonth");
-var finalYear = document.getElementById("dateyear");
-var finalCvc = document.getElementById("cvcinput");
+const cardNumber = document.getElementById("cardnumber");
+const month = document.getElementById("month");
+const year = document.getElementById("year");
+const CVC = document.getElementById("cvc");
 
 
-function start() {
-    cardName.innerHTML = finalName.value.toUpperCase();
-    cardNumber.innerHTML = finalNum.value;
-    completeDate.innerHTML = finalMonth.value + "/" + finalYear.value;
-    Cvc.innerHTML = finalCvc.value;
-}
+const inputName = document.getElementById("inputname");
+const inputNumber = document.getElementById("inputnumber");
+const dateMonth = document.getElementById("datemonth");
+const dateYear = document.getElementById("dateyear");
+const cvcInput = document.getElementById("cvcinput");
 
-function validate() {
-    finalName.value = finalName.value.replace(/[^a-zA-Z\s]+/, '');
-}
+var re = new RegExp (/^[a-zA-Z]+$/);
 
-function validateNum() {
-    finalNum.value = finalNum.value.replace(/[^0-9\s]+/, '');
-    finalMonth.value = finalMonth.value.replace(/[^0-9]+/, '');
-    finalYear.value = finalYear.value.replace(/[^0-9]+/, '');
-    finalCvc.value = finalCvc.value.replace(/[^0-9]+/, '');
-}
+inputName.addEventListener("input", (e) => {
+    cardName.innerHTML = e.target.value.toUpperCase();
+});
 
+inputNumber.addEventListener("input", (e) => {
+    cardNumber.innerHTML = e.target.value.replace(/(.{4})/g, '$1 ');
+    if(re.test(inputNumber.value)) {
+        document.getElementById("popi").style.visibility = "visible";
+    } else {
+        document.getElementById("popi").style.visibility = "hidden";
+    }
+});
+
+dateMonth.addEventListener("input", (e) => {
+    month.innerHTML = e.target.value.replace(/[^\dA-Z]/g, '');
+})
+
+dateYear.addEventListener("input", (e) => {
+    year.innerHTML = e.target.value.replace(/[^\dA-Z]/g, '');
+})
+
+cvcInput.addEventListener("input", (e) => {
+    CVC.innerHTML = e.target.value.replace(/[^\dA-Z]/g, '');
+})
 
