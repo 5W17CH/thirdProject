@@ -35,11 +35,11 @@
                 
                     <label>CARDHOLDER NAME</label>
                     <input type="text" id="inputname" placeholder="e.g Jane Appleseed" maxlength="25">
-                    <small>error</small>
+                    <small id="errorname">Wrong format, letters only</small>
 
                     <label>CARD NUMBER</label>
                     <input type="text" id="inputnumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
-                    <small id="popi">error</small>
+                    <small id="errornum">Wrong format, numbers only</small>
 
                     <div class="datebox">
                         <label>EXP. DATE (MM/YY)</label>
@@ -53,8 +53,8 @@
                     </div>
 
                     <div class="inputbox">
-                        <small style="margin-right: 10rem;">error</small>
-                        <small>error</small>
+                        <small style="margin-right: 10rem;" id="errordate">error</small>
+                        <small id="errorcvc">error</small>
                     </div>
 
                     <button id="button" onclick="start()">Confirm</button>

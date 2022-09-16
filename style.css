@@ -213,9 +213,12 @@ small
 {   
     margin-bottom: 1rem;
     color: red;
+    visibility: hidden;
 }
 
-#popi
+#errorname,
+#errorcvc,
+#errornum
 {
     visibility: hidden;
 }
