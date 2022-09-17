@@ -11,6 +11,9 @@ const dateMonth = document.getElementById("datemonth");
 const dateYear = document.getElementById("dateyear");
 const cvcInput = document.getElementById("cvcinput");
 
+const confirmBtn = document.getElementById("button");
+
+
 var re = new RegExp ("^[0-9]+$");
 var re2 = new RegExp ("^[a-zA-Z ]+$");
 
@@ -61,4 +64,14 @@ cvcInput.addEventListener("input", (e) => {
     }
 })
 
+function start() {
+    document.getElementById("container").style.visibility = "hidden";
+    document.getElementById("containerfinal").style.visibility = "visible";
+}
+
+function refresh() {
+    location.reload();
+}
+
 //when button is pressed check all fields filled and (&&) no errors if true execute function and transform container to "thank you we've added your card details"//
+//check if month is in range of 12 otherwise throw error//

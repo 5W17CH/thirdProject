@@ -97,9 +97,10 @@ body
     top: 1rem;
 }
 
-.container
+#container
 {   
     display: flex;
+    visibility: visible;
     flex-direction: column;
     width: 90%;
     height: auto;
@@ -223,7 +224,7 @@ small
     visibility: hidden;
 }
 
-button
+#button
 {
     height: 3rem;
     border: none;
@@ -232,6 +233,50 @@ button
     font-size: 1rem;
     border-radius: 0.6em;
     cursor: pointer;
+}
+
+#containerfinal
+{   
+    display: flex;
+    position: absolute;
+    visibility: hidden;
+    flex-direction: column;
+    width: 90%;
+    top: 20rem;
+    margin-left: 5%;
+    align-items: center;
+}
+
+.completeicon 
+{
+    width: 5rem;
+    margin-top: 2rem;
+}
+
+.thanks
+{
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    letter-spacing: 0.3rem;
+}
+
+.thankstext
+{
+    margin-top: 0.6rem;
+    letter-spacing: 0.1rem;
+}
+
+#continuebtn
+{
+    margin-top: 4rem;
+    height: 3rem;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    font-size: 1rem;
+    border-radius: 0.6em;
+    cursor: pointer;
+    width: 90%;
 }
 
 @media only screen and (min-width:900px)
@@ -282,7 +327,7 @@ button
         
     }
 
-    .container
+    #container
     {   
         display: flex;
         position: relative;
@@ -305,5 +350,13 @@ button
     {
         width: 12.2rem;
         height: 2.8rem;
+    }
+
+    #containerfinal
+    {   
+        display: flex;
+        max-width: 25rem;
+        top: 14rem;
+        left: 40rem;
     }
 }
